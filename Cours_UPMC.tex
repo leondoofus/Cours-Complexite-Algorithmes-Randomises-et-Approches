@@ -1038,7 +1038,7 @@ Donc le nombre d'itérations est linéaire en le nombre de clauses.
 Un calcul d'une telle MT est défini de manière analogue à celui d'une MT classique (où déterministe), sauf qu'à chaque étape du calcul, la fonction de transition à appliquer est tirée uniformément aléatoirement parmi \{$\delta_0$, $\delta_1$\}.\\
 Pour une MTP M et une entrée x $\in \Sigma^*$, on note M(x) la variable aléatoire qui vaut 1 si M s'arrête dans l'état $q_{acc}$ (et 0 si M s'arrête en $q_{rej}$) sur l'entrée x (pour les choix aléatoires de la fonction de transition).\\
 Pour une MTP M, on dit M a pour temps d'exécution une fonction T : $\mathbb{N} \longmapsto \mathbb{N}$ telle que pour toute entrée x $\in \mathbb{Z}^*$, un calcul de M sur x se termine en au plus T(|x|) étapes. Une MTP est dite polynomiale si elle a pour temps d'exécution un polynôme.
-\subsection{Bounded Probabilistic Time (BPTIME) et Bounded Probabilistic Polynomial Time (BPP)}
+\subsection{Bounded Probabilistic Time (BPTIME) et Bounded-error Probabilistic Polynomial Time (BPP)}
 \textbf{Définition :} Soient T : $\mathbb{N} \longmapsto \mathbb{N}$ et L $\subseteq \Sigma^*$.\\
 Une MTP M accepte le langage si et seulement si pour toute entrée x $\in \Sigma^*$ Pr(M(x) = L(x)) $\geq \frac{2}{3}$ où
 \begin{subnumcases}{L(x) =}
@@ -1056,7 +1056,7 @@ $\forall$ x $\in \Sigma^*$, $\underset{r \gets \{0, 1\}^{T(|x|)}}{Pr} (M(x, r) =
 	\item Primalité (Miller-Rabin)
 	\item Identité polynomiale
 \end{itemize}
-\subsection{Randomised Time (RTIME) et Randomised Polynomial Time (RP)}
+\subsection{Randomised Time (RTIME) et Randomized Polynomial Time (RP)}
 \textbf{Définition :} Avec les même notations, on définit la classe RTIME(T), la classe des langages L $\subseteq \Sigma^*$ pour lesquels il existe une MTP M de temps d'exécution T telle que, pour tout x $\in \Sigma^*$ :
 \begin{itemize}
 	\item Si x $\in$ L, Pr(M(x) = 1) $\geq \frac{2}{3}$
@@ -1069,7 +1069,7 @@ On note RP = $\bigcup\limits_{k \geq 0}$ RTIME (n $\longmapsto$ $n^k$)\\
 \tab co-RP $\subseteq$ BPP\\
 \tab P $\subseteq$ BPP\\
 \tab BPP $\subseteq$ EXP = $\bigcup\limits_{k \geq 0}$ TIME (n $\longmapsto$ $2^{n^k})$
-\subsection{"Zero-sided error" Time (ZTIME)}
+\subsection{"Zero-sided-error" Time (ZTIME)}
 \textbf{Définiton :} Avex les mêmes notations; on définit la calsse ZTIME(T), la classe des langages L $\subseteq \Sigma^*$ pour lesquels il existe une MTP M dont le temps d'exécution en moyenne est borné par T(|x|) sur toute entrée x et telle que pour tout x $\in \Sigma^*$ : Pr(M(x) = L(x)) = 1\\(autrement dit :
 \begin{itemize}
 	\item Si x $\in$ L, Pr(M(x) = 1) = 1
