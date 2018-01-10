@@ -166,19 +166,19 @@ Un langage L sur un alphabet $\Sigma$ est dans NP si et seulement s'il existe un
 \textbf{\Large CLIQUE}\\
 \begin{itemize}
 	\item \textbf{Entrée :} Un graphe non orienté G et un entier k.
-	\item \textbf{Question :} G possède-t-il \underline{une clique de taille k}? (un ensemble de k sommets 2 à 2 adjacents)
+	\item \textbf{Question :} G possède-t-il \underline{une clique de taille k} ? (un ensemble de k sommets 2 à 2 adjacents)
 	\item \textbf{Certificat :} Une clique de taille k.\\
 \end{itemize}
 \textbf{\Large PARTITION}\\
 \begin{itemize}
 	\item \textbf{Entrée :} S ensemble de n entiers positifs.
-	\item \textbf{Question :} Peut-on partitionner S en 2 sous-ensembles $S_1$ et $S_2$ tels que la somme des entiers dans $S_1$ = la somme des entiers dans $S_2$?
+	\item \textbf{Question :} Peut-on partitionner S en 2 sous-ensembles $S_1$ et $S_2$ tels que la somme des entiers dans $S_1$ = la somme des entiers dans $S_2$ ?
 	\item \textbf{Certificat :} $S_1$ et $S_2$.\\
 \end{itemize}
 \textbf{\Large SATISFIABILITÉ (SAT)}\\
 \begin{itemize}
 	\item \textbf{Entrée :} Une formule booléenne $\phi$.
-	\item \textbf{Question :} $\phi$ est-elle satisfiable?
+	\item \textbf{Question :} $\phi$ est-elle satisfiable ?
 	\item \textbf{Certificat :} Valeurs de vérité (V ou F) aux variables.\\
 \end{itemize}
 \subsection{P $\lor$ NP}
@@ -226,7 +226,7 @@ Exemple : On montre que CLIQUE est NP-complet
 	\item CLIQUE $\in$ NP\\
 	\textbf{Certificat : clique de taille k}
 	\item Problème 3-SAT :\\
-	Une formule booléenne est en forme normale conjonctive (FNC) si elle constitue d'un ensemble de clauses (litéraux reliés par des $\lor$) reliées par des $\land$.\\
+	Une formule booléenne est en forme normale conjonctive (FNC) si elle constitue d'un ensemble de clauses (littéraux reliés par des $\lor$) reliées par des $\land$.\\
 	Exemple : ($x_1$ $\lor$ $x_2$) $\land$ ($\overline{x_2}$ $\lor$ $x_3$ $\lor$ $\overline{x_4}$)\\
 	Une formule booléenne 3FNC est une formule en FNC telle que chaque clause a 3 littéraux.\\
 	Exemple : ($x_1$ $\lor$ $x_2$ $\lor$ $\overline{x_3}$) $\land$ ($x_1$ $\lor$ $x_4$ $\lor$ $\overline{x_2}$)\\
@@ -364,7 +364,7 @@ On transforme G : entrée VC $\Rightarrow$ G' : entrée CH, telle que :
 G :
 \begin{itemize}
 	\item même que G'
-	\item arête a un coût 1 ssi \{u, v\} appartient à G'
+	\item arête a un coût 1 si et seulement si \{u, v\} appartient à G'
 	\item sinon \{u, v\} a un coût $\alpha$n
 \end{itemize}
 Supposons qu'il existe un algorithme polynomial $\alpha$-approché pour le problème du VC.\\
@@ -907,7 +907,7 @@ Polynôme en 101 variables de degré 5050 avec 101! termes :
 Pour résoudre le problème de l'identité de polynôme, nous allons utiliser un théorème du à Schwartz et Zippel \href{https://rjlipton.wordpress.com/2009/11/30/the-curious-history-of-the-schwartz-zippel-lemma/}{(The Curious History of the Schwartz-Zippel(-DeMillo-Lipton) Lemma, \textit{blog de Richard Lipton})} en 1978 - 1979.\\\\
 \textbf{\large Théorème (Lemme de Schwartz-Zippel) :}\\
 Soient $\mathbb{K}$ un corps, n $\in \mathbb{N}$, n $\geq$ 1 et S un sous-ensemble fini de $\mathbb{K}$.\\
-Soit P un polynôme à coefficents dans $\mathbb{K}$ à n variables, P $\in \mathbb{K}$[$x_1$, .., $x_n$] non nul, alors :
+Soit P un polynôme à coefficients dans $\mathbb{K}$ à n variables, P $\in \mathbb{K}$[$x_1$, .., $x_n$] non nul, alors :
 \begin{center}
 	$\underset{(x_1, .., x_n)\in S}{Pr} (P(x_1, .., x_n) = 0) \leq \dfrac{degP}{\#S}$
 \end{center}
@@ -923,7 +923,7 @@ où degP désigne le degré totem du polynôme P.\\
 	\begin{center}
 		$\#\{x_1 \in S, P(x_1) = 0\} \leq \#\{x_1 \in \mathbb{K}, P(x_1) = 0\} \leq degP = \dfrac{degP}{(\#S)^{1 - n}}$
 	\end{center}
-	\item Supposons le résultat montré pout tout entier k < n avec n $\geq$ 2. On veut montrer pour l'entier n.\\
+	\item Supposons le résultat montré pour tout entier k < n avec n $\geq$ 2. On veut montrer pour l'entier n.\\
 	Soit P $\in \mathbb{K}[x_1, .., x_n]$ un polynôme non nul. Si P n'est pas un polynôme constant (auquel cas le résultat est immédiat car P = c $\neq$ 0 n'a aucune racine), il existe une variable apparaissant dans P avec un coefficient non nul. Nous pouvons supposer sans perdre de généralité qu'il s'agit de $x_1$.\\
 	Nous pouvons écrire :
 	\begin{center}
@@ -1070,7 +1070,7 @@ On note RP = $\bigcup\limits_{k \geq 0}$ RTIME (n $\longmapsto$ $n^k$)\\
 \tab P $\subseteq$ BPP\\
 \tab BPP $\subseteq$ EXP = $\bigcup\limits_{k \geq 0}$ TIME (n $\longmapsto$ $2^{n^k})$
 \subsection{"Zero-sided-error" Time (ZTIME)}
-\textbf{Définiton :} Avex les mêmes notations; on définit la calsse ZTIME(T), la classe des langages L $\subseteq \Sigma^*$ pour lesquels il existe une MTP M dont le temps d'exécution en moyenne est borné par T(|x|) sur toute entrée x et telle que pour tout x $\in \Sigma^*$ : Pr(M(x) = L(x)) = 1\\(autrement dit :
+\textbf{Définition :} Avec les mêmes notations; on définit la calsse ZTIME(T), la classe des langages L $\subseteq \Sigma^*$ pour lesquels il existe une MTP M dont le temps d'exécution en moyenne est borné par T(|x|) sur toute entrée x et telle que pour tout x $\in \Sigma^*$ : Pr(M(x) = L(x)) = 1\\(autrement dit :
 \begin{itemize}
 	\item Si x $\in$ L, Pr(M(x) = 1) = 1
 	\item Si x $\not\in$ L, Pr(M(x) = 0) = 1).
@@ -1143,7 +1143,7 @@ Le $3^\text{ème}$ cas de l'analyse précédente (M retourne 0 et M' retourne 1)
 &= \frac{1}{p}
 \end{split}
 \end{equation}
-\textbf{Remarque :} Les définitions que nous venons de voir sont robustes. Les classes BPP, RP, co-RP ne sont pas modifiées si on remplace la constante $\frac{2}{3}$ par une constante c > $\frac{1}{2}$. Elle ne sont pas modifiées non plus si on change la source d'aléaoire (utilisé un tirage dans \{1, .., n\}) au lieu de \{0, 1\} ou une source d'aléatoire biaisée).\\
+\textbf{Remarque :} Les définitions que nous venons de voir sont robustes. Les classes BPP, RP, co-RP ne sont pas modifiées si on remplace la constante $\frac{2}{3}$ par une constante c > $\frac{1}{2}$. Elle ne sont pas modifiées non plus si on change la source d'aléatoire (utilisé un tirage dans \{1, .., n\}) au lieu de \{0, 1\} ou une source d'aléatoire biaisée).\\
 En effet, si on dispose d'une source d'aléatoire avec Pr(b = 0) = $\frac{2}{3}^p$ et Pr(b = 1) = $\frac{1}{3}^{1 - p}$ pour produire des bits b, on peut construire une autre source d'aléatoire non biaisée en temps espéré constant. Pour cela on utilise l'extracteur de Von Neumann qui tire des bits selon la source biaisée 2 par 2 et s'il reçoit 01 il retourne 0, 10 il retourne 1, 00 ou 11 il recommence.\\
 $\longrightarrow$ On peut définir les réduction randomisées (ou probabilistes) et ainsi définir de nouvelles classes de complexité comme : BPNB =\{L, L $\leq_r$ 3-SAT\}.
 \begin{center}
